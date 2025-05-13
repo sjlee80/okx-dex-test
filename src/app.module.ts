@@ -13,6 +13,7 @@ import jwtConfig from './common/config/jwt.config';
 import s3Config from './common/config/s3.config';
 import { ScheduleModule } from '@nestjs/schedule';
 import { SwapModule } from './swap/swap.module';
+import { ParseModule } from './parse/parse.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { SwapModule } from './swap/swap.module';
     SwapModule,
     HealthModule,
     DevModule,
+    ParseModule,
   ],
   providers: [
     Logger,
