@@ -10,15 +10,15 @@ export class ParseController {
 
   @Get()
   @ApiQuery({ name: 'signature', required: true })
-  async findAll(@Query() query: ParseSignatureDto) {
+  async parseTransaction(@Query() query: ParseSignatureDto) {
     return this.parseService.parseTransaction(query.signature);
   }
 
-  @Get('contract/:address')
+  @Get('account/:address')
   @ApiParam({
     name: 'address',
     required: true,
-    description: 'Contract address',
+    description: 'account address',
   })
   async getContractAssets(@Param('address') address: string) {
     return this.parseService.getContractAssets(address);
