@@ -14,6 +14,7 @@ import s3Config from './common/config/s3.config';
 import { ScheduleModule } from '@nestjs/schedule';
 import { SwapModule } from './swap/swap.module';
 import { ParseModule } from './parse/parse.module';
+import { OkxModule } from './okx/okx.module';
 
 @Module({
   imports: [
@@ -36,6 +37,7 @@ import { ParseModule } from './parse/parse.module';
     HealthModule,
     DevModule,
     ParseModule,
+    OkxModule,
   ],
   providers: [
     Logger,
